@@ -1,0 +1,93 @@
+---
+import TechIcon from "@components/TechIcon.astro";
+
+const icons: Tech[] = [
+  "Git",
+  "HTML5",
+  "CSS3",
+  "SASS",
+  "Javascript",
+  "Typescript",
+  "React",
+  "Vue",
+];
+---
+
+<ul class="icon-list content" role="list">
+  {
+    icons.map((icon) => {
+      return (
+        <li data-tooltip={icon}>
+          <TechIcon name={icon} />
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style lang="scss">
+  .icon-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-xl-2xl);
+    font-size: var(--step-4);
+    color: var(--gray);
+  }
+
+  li {
+    --duration: 350ms;
+    --delay: 100ms;
+
+    position: relative;
+    opacity: 0;
+    transition: opacity var(--duration) linear calc(var(--delay) * var(--i)),
+      transform var(--duration) ease-out calc(var(--delay) * var(--i));
+    transform: translateY(12rem);
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        --i: #{$i};
+      }
+    }
+
+    &::after {
+      content: attr(data-tooltip);
+      display: block;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      font-size: 1.3rem;
+      padding: 0.15rem 0.4rem;
+      background-color: var(--bg-secondary);
+      color: var(--fg);
+      transform: translate(-50%, 0rem);
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--danger);
+
+      &::after {
+        opacity: 1;
+        transform: translate(-50%, -0.3rem);
+      }
+    }
+  }
+
+  .fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  addEventListener("load", () => {
+    const iconList = document.querySelectorAll(".icon-list li");
+    iconList.forEach((icon) => icon.classList.add("fadeIn"));
+  });
+</script>

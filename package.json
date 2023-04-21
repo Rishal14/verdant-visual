@@ -1,15 +1,28 @@
 {
-  "name": "verdant-visual",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^2.3.0"
-  }
+    "name": "@example/basics",
+    "type": "module",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build ",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/image": "^0.13.1",
+        "@fontsource/nunito-sans": "^4.5.10",
+        "@iconify/json": "^2.2.5",
+        "@octokit/core": "^4.2.0",
+        "astro": "^2.0.0",
+        "sass": "^1.57.1",
+        "sharp": "^0.31.3",
+        "unplugin-icons": "^0.15.1",
+        "vue": "^3.2.30"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.2",
+        "prettier-plugin-astro": "^0.7.2"
+    }
 }

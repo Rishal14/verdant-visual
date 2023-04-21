@@ -1,0 +1,60 @@
+---
+import LightBulb from "~icons/mdi/lightbulb-variant-outline";
+import Console from "~icons/mdi/console-line";
+import Airplane from "~icons/mdi/airplane";
+---
+
+<div class="skills" id="hobby">
+  <div class="skills__card">
+    <Airplane class="skills__icon" />
+    <h2>Travelling</h2>
+    <p>
+      One of my hobby is travelling. 
+    </p>
+  </div>
+
+  <div class="skills__card">
+    <Console class="skills__icon" />
+    <h2>Programming</h2>
+    <p>
+      Programming is my passion. I have learnt programming languages like C++,Python,Java,C etc.
+    </p>
+  </div>
+
+  <div class="skills__card">
+    <LightBulb class="skills__icon" />
+    <h2>Graphic Design</h2>
+    <p>
+      Iam fallen into the world of graphic design and want to explore it!!
+    </p>
+  </div>
+</div>
+
+<style lang="scss">
+  h2 {
+    margin-bottom: var(--step--1);
+    font-size: var(--step-1);
+    line-height: 1.2;
+  }
+
+  .skills__icon {
+    margin-inline: auto;
+    font-size: var(--step-3);
+    color: var(--bg-details);
+    margin-bottom: var(--space-s);
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .skills__card {
+    @include card;
+    flex: 1 0 200px;
+    box-sizing: content-box;
+  }
+</style>
