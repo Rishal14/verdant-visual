@@ -1,11 +1,11 @@
 ---
-title: "F1 Next"
+title: "Bootcamp"
 slug: "f1next"
 weight: 30
 tech: [Typescript, Vue, Nuxt, Netlify]
 link: https://f1next.netlify.app/
 screenshots: [./src/assets/images/project-f1next.png]
-repoLink: https://github.com/ralacerda/nuxt-f1next
+
 ---
 
 Este projeto é um aplicativo web para exibir o horário dos eventos de Formula 1, destacando os próximos eventos.

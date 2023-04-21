@@ -1,5 +1,5 @@
 ---
-title: "Contrast Checker"
+title: "Bootcamp"
 slug: "contraste"
 weight: 20
 tech: [SASS, Javascript, Vue, Bulma, Vite, Netlify]
