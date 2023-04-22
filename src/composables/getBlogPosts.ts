@@ -7,7 +7,7 @@ export async function getBlogPosts() {
   );
 
   return blogPosts.sort(
-    (a: { data: { publishDate: { getTime: () => any; }; }; }, b: { data: { publishDate: { getTime: () => any; }; }; }) =>
+    (a, b) =>
       (b.data.publishDate?.getTime() || 0) -
       (a.data.publishDate?.getTime() || 0)
   );
