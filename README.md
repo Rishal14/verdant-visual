@@ -4,7 +4,7 @@
 npm create astro@latest -- --template basics
 ```
 
-
+[![Screenshot](screenshot (22).png)]
 
 ## 🚀 Project Structure
 
